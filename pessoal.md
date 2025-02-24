@@ -34,11 +34,7 @@ Parâmetros recebidos:
 * **Cálculo de atrasos:**
     * Para parcelas com `status = vencida`:
         * Multa por atraso: Fixa em 2% sobre `valorParcelaOriginal`.
-        * Juros de mora: 1% ao mês (0,0333% ao dia) sobre `valorParcelaOriginal`, proporcional aos dias de atraso (`dataConsulta` - `dataVencimento`).
-        * Fórmula:
-            * `Multa = valorParcelaOriginal * 0.02`
-            * `JurosMora = valorParcelaOriginal * 0.000333 * diasAtraso`
-            * `ValorTotalDevido = valorParcelaOriginal + Multa + JurosMora`
+        * Juros de mora: 1% ao mês (0,0333% ao dia) sobre `valorParcelaOriginal`, proporcional aos dias de atraso.
 
 ### 2.1.3. Saídas Geradas
 
@@ -212,21 +208,10 @@ Registro atualizado com `status = paga`, `dataPagamento = 25/08/2025`, `valorPag
     * Pode ser pago à vista ou diluído nas parcelas.
     * Cálculo: O cálculo do IOF é complexo e varia de acordo com o prazo do empréstimo e o tipo de cliente. Geralmente, é um percentual sobre o valor do empréstimo, com uma alíquota diária adicional.
     * Recomenda-se consultar a tabela oficial do IOF para valores exatos.
-* **Taxa de Cadastro:**
-    * Cobrada para realizar o cadastro do cliente, especialmente se não possuir conta corrente no banco.
-    * Valor fixo.
-* **Taxa de Avaliação de Bens:**
-    * Cobrada se o empréstimo exigir garantia de bens (veículos, imóveis).
-    * Cobre os custos de avaliação dos bens.
-    * Valor varia conforme o tipo de bem.
 * **Taxa de Seguro (Seguro Prestamista):**
     * Garante o pagamento do empréstimo em caso de morte ou invalidez do cliente.
     * Opcional, mas pode ser exigido em alguns casos.
     * Valor varia conforme o perfil do cliente e o valor do empréstimo.
-* **Taxa de Liquidação Antecipada:**
-    * Cobrada se o cliente quitar o empréstimo antes do prazo previsto.
-    * Regulamentada por lei, com limites máximos.
-    * O cálculo depende do saldo devedor e do tempo restante para o término do contrato.
 * **Custo Efetivo Total (CET):**
     * Indicador do custo total do empréstimo, incluindo todas as taxas e encargos.
     * Essencial para comparar diferentes ofertas de empréstimo.
@@ -359,15 +344,6 @@ Registro atualizado com `status = paga`, `dataPagamento = 25/08/2025`, `valorPag
 
 **TAC (Taxa de Abertura de Crédito)**
 : Taxa cobrada no momento da contratação do empréstimo, para cobrir os custos administrativos da instituição financeira.
-
-**Taxa de Avaliação de Bens**
-: Taxa cobrada quando o empréstimo exige garantia de bens, para cobrir os custos de avaliação desses bens.
-
-**Taxa de Cadastro**
-: Taxa cobrada para realizar o cadastro do cliente, especialmente se ele não possuir conta corrente no banco.
-
-**Taxa de Liquidação Antecipada**
-: Taxa cobrada quando o cliente quita o empréstimo antes do prazo previsto.
 
 **Taxa de Seguro (Seguro Prestamista)**
 : Taxa cobrada para garantir o pagamento do empréstimo em caso de morte ou invalidez do cliente.
