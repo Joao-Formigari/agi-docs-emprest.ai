@@ -16,6 +16,7 @@
 
 ## Autores
 - [@Dalleth Martins](https://github.com/dalleth-martinss)
+- [@João Pedro C. Formigari](https://github.com/Joao-Formigari)
 - [@Josué Davi da Costa](https://github.com/josdcosta)
 - [@Carollina Guedes](https://github.com/CarollinaGuedes)
 - [@Victor Augusto Ferreira](https://github.com/Victor-augusto-ferreira)
